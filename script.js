@@ -1,6 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     /* ==========================================
-       0. MOBILE NAVIGATION HAMBURGER MENU
+       0. DARK / LIGHT MODE THEME SWITCHER
+       ========================================== */
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    const savedTheme = localStorage.getItem("portfolioTheme");
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+        if (themeIcon) {
+            themeIcon.classList.replace("fa-sun", "fa-moon");
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            const isLight = document.body.classList.toggle("light-mode");
+            localStorage.setItem("portfolioTheme", isLight ? "light" : "dark");
+
+            if (themeIcon) {
+                if (isLight) {
+                    themeIcon.classList.replace("fa-sun", "fa-moon");
+                } else {
+                    themeIcon.classList.replace("fa-moon", "fa-sun");
+                }
+            }
+        });
+    }
+
+    /* ==========================================
+       1. MOBILE NAVIGATION HAMBURGER MENU
        ========================================== */
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
@@ -20,8 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
     /* ==========================================
-       1. CONTACT FORM VALIDATION & EMAILJS
+       2. CONTACT FORM VALIDATION & EMAILJS
        ========================================== */
     const contactForm = document.getElementById("contactForm");
     const phoneInput = document.getElementById("phone");
@@ -40,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ==========================================
-       2. ACADEMIC PLANNER SYSTEM
+       3. ACADEMIC PLANNER SYSTEM
        ========================================== */
     const taskForm27 = document.getElementById("taskForm27");
     if (taskForm27) {

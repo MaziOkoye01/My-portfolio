@@ -14,6 +14,67 @@
     --radius: 14px;
 }
 
+/* ==========================================
+   LIGHT MODE THEME OVERRIDES
+   ========================================== */
+body.light-mode {
+    --bg-black: #f8f6f7;
+    --bg-dark: #ffffff;
+    --bg-card: #ffffff;
+    --border-subtle: #e4d4d8;
+    --text-white: #18181b;
+    --text-muted: #52525b;
+    --burgundy-tint: #800020;
+}
+
+body.light-mode #header {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(248, 246, 247, 0.95)), url(okoye\ background\(1\).png);
+}
+
+body.light-mode .contact-banner,
+body.light-mode .profile-card27 {
+    background: linear-gradient(135deg, #fce7ec, #ffffff);
+    border-color: #d8a3b0;
+}
+
+body.light-mode .education-date,
+body.light-mode .academic-table th,
+body.light-mode .status-badge,
+body.light-mode .skill-tag,
+body.light-mode .tag {
+    background-color: #fce7ec;
+    border-color: #e0b0bc;
+}
+
+body.light-mode .project-card {
+    border-color: #e4d4d8;
+}
+
+body.light-mode .project-preview {
+    background: #f4f4f5;
+}
+
+body.light-mode .task-input27,
+body.light-mode .task-priority-select27,
+body.light-mode .event-name-input27,
+body.light-mode .event-date-input27,
+body.light-mode .filter27,
+body.light-mode .task-item,
+body.light-mode .event-item,
+body.light-mode .field .item {
+    background-color: #f4f4f5;
+    border-color: #d4d4d8;
+    color: #18181b;
+}
+
+body.light-mode .field .item::placeholder {
+    color: rgba(24, 24, 27, 0.45);
+}
+
+body.light-mode .progress-bar27 {
+    background-color: #e4e4e7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +92,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -102,6 +164,28 @@ nav ul li a.active-link {
 nav ul li a:hover::after,
 nav ul li a.active-link::after {
     width: 100%;
+}
+
+/* Theme Toggle Button (Dark / Light Mode) */
+.theme-toggle {
+    background: var(--bg-card);
+    border: 1.5px solid var(--burgundy);
+    color: var(--burgundy-tint);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--burgundy);
+    color: #ffffff;
+    transform: scale(1.06);
 }
 
 /* Hamburger Button (Hidden on Desktop) */
@@ -213,7 +297,7 @@ nav ul li a.active-link::after {
     display: inline-block;
     padding: 12px 26px;
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
@@ -239,7 +323,7 @@ nav ul li a.active-link::after {
 
 .btn-outline:hover {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
 }
 
 .hero-photo-box {
@@ -313,7 +397,7 @@ nav ul li a.active-link::after {
 
 .service-card:hover {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     border-color: var(--burgundy);
     transform: translateY(-8px);
 }
@@ -321,7 +405,7 @@ nav ul li a.active-link::after {
 .service-card:hover i,
 .service-card:hover p,
 .service-card:hover a {
-    color: var(--text-white);
+    color: #ffffff;
 }
 
 /* Featured Work */
@@ -385,7 +469,7 @@ nav ul li a.active-link::after {
     height: 44px;
     border-radius: 50%;
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     text-decoration: none;
     transition: background 0.3s ease;
 }
@@ -776,13 +860,13 @@ nav ul li a.active-link::after {
 
 .project-btn.primary {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     border-color: var(--burgundy);
 }
 
 .project-btn:hover {
     background: var(--burgundy-light);
-    color: var(--text-white);
+    color: #ffffff;
 }
 
 .card-title {
@@ -864,7 +948,7 @@ nav ul li a.active-link::after {
     min-width: 62px;
     border-radius: 50%;
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     display: grid;
     place-items: center;
 }
@@ -969,7 +1053,7 @@ nav ul li a.active-link::after {
 .task-submit27,
 .event-submit27 {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     padding: 12px;
     border-radius: 9px;
     display: flex;
@@ -1007,7 +1091,7 @@ nav ul li a.active-link::after {
 .filter27.active,
 .filter27:hover {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     border-color: var(--burgundy);
     font-weight: 600;
 }
@@ -1065,7 +1149,7 @@ nav ul li a.active-link::after {
 
 .event-date {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
     min-width: 44px;
     height: 44px;
     border-radius: 8px;
@@ -1243,7 +1327,7 @@ form .textarea-field .item {
     border: none;
     border-radius: 8px;
     font-size: 15px;
-    color: var(--text-white);
+    color: #ffffff;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -1262,7 +1346,7 @@ form .textarea-field .item {
 
 .contacts form a.btn-home:hover {
     background: var(--burgundy);
-    color: var(--text-white);
+    color: #ffffff;
 }
 
 /* ==========================================
@@ -1326,6 +1410,10 @@ form .textarea-field .item {
 @media (max-width: 650px) {
     #header {
         background-image: linear-gradient(rgba(10, 10, 11, 0.85), rgba(10, 10, 11, 0.95)), url(phone\ background.png);
+    }
+
+    body.light-mode #header {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(248, 246, 247, 0.95)), url(phone\ background.png);
     }
 
     nav {
