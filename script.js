@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     /* ==========================================
+       0. MOBILE NAVIGATION HAMBURGER MENU
+       ========================================== */
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("show-menu");
+            menuToggle.classList.toggle("open", isOpen);
+            menuToggle.setAttribute("aria-expanded", isOpen);
+        });
+
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("show-menu");
+                menuToggle.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+    /* ==========================================
        1. CONTACT FORM VALIDATION & EMAILJS
        ========================================== */
     const contactForm = document.getElementById("contactForm");
