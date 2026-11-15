@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Okoye Kenneth Somto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("y-NVrJCFODUS6k8Jb");
+        })();
+    </script>
+</head>
+<body class="contact-page-body">
+    <header class="page-header">
+        <div class="container">
+            <nav aria-label="Primary Navigation">
+                <a href="index.html"><img src="OKOYE_Logo_Final.png" alt="OKOYE Brand Logo" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="planner.html">Planner</a></li>
+                    <li><a href="contact.html" class="active-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contacts">
+            <h1>Contact Me</h1>
+            <p class="contact-subtitle">Have a project, collaboration, or academic inquiry? Fill out the form below.</p>
+
+            <form id="contactForm" novalidate>
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                        <div class="error-txt" id="nameError">Full Name can't be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                        <div class="error-txt" id="emailError">Please enter a valid email address</div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="tel" placeholder="Phone Number (Digits Only)" id="phone" class="item" autocomplete="off" maxlength="11">
+                        <div class="error-txt" id="phoneError">Phone number must contain digits only (1–11 numbers)</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                        <div class="error-txt" id="subjectError">Subject can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="textarea-field field">
+                    <textarea id="message" cols="30" rows="8" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                    <div class="error-txt" id="messageError">Message can't be blank</div>
+                </div>
+
+                <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+                <div class="button-group">
+                    <button type="submit" id="submit-btn">Send Message</button>
+                    <a href="index.html" class="btn-home">← Back to Home</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Copyright © 2026 Okoye Kenneth Somto | Department of Software Engineering, Miva Open University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
