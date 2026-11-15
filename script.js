@@ -51,7 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ==========================================
-       2. CONTACT FORM VALIDATION & EMAILJS
+       2. AUTOMATIC ACTIVE NAVIGATION LINK
+       ========================================== */
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active-link");
+        }
+    });
+
+    /* ==========================================
+       3. CONTACT FORM VALIDATION & EMAILJS
        ========================================== */
     const contactForm = document.getElementById("contactForm");
     const phoneInput = document.getElementById("phone");
@@ -70,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ==========================================
-       3. ACADEMIC PLANNER SYSTEM
+       4. ACADEMIC PLANNER SYSTEM
        ========================================== */
     const taskForm27 = document.getElementById("taskForm27");
     if (taskForm27) {
