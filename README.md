@@ -76,3 +76,6 @@ This project satisfies all functional and technical criteria specified in the CO
 ├── style.css           # Unified responsive stylesheet
 ├── script.js           # Form validation & planner state logic
 └── assets/             # Logos, profile image, video intro & CV PDF
+### Dark & Light Mode Theme System
+- **CSS Custom Property Overrides (`style.css`):** Built on `:root` design tokens (`--bg-black`, `--bg-dark`, `--bg-card`, `--text-white`, `--gold-tint`), allowing `body.light-mode` to restyle backgrounds, hero overlays, cards, tables, and form inputs seamlessly with smooth `0.3s` color transitions.
+- **Cross-Page `localStorage` Persistence (`script.js`):** Listens for clicks on `#themeToggle`, updates the sun/moon icon (`#themeIcon`), and saves the active theme under the `portfolioTheme` key so the selected mode remains consistent when navigating between Home, About, Projects, Planner, and Contact.
