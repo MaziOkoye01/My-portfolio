@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --gold: #d4af37;
-    --gold-light: #e5c158;
-    --gold-dark: #7a6218;
-    --gold-tint: #f7e7b4;
+    --gold: #800020;
+    --gold-light: #a30029;
+    --gold-dark: #4a0012;
+    --gold-tint: #f5b8c7;
     --bg-black: #0a0a0b;
     --bg-dark: #121215;
     --bg-card: #1a1a1f;
-    --border-subtle: #2b2516;
+    --border-subtle: #2b161c;
     --text-white: #ffffff;
     --text-muted: #a1a1aa;
     --radius: 14px;
@@ -216,7 +216,7 @@ nav ul li a.active-link::after {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--gold);
-    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 12px 35px rgba(128, 0, 32, 0.35);
 }
 
 /* Services / Competencies */
@@ -362,7 +362,7 @@ nav ul li a.active-link::after {
 }
 
 .contact-banner {
-    background: linear-gradient(135deg, #261f0a, var(--bg-card));
+    background: linear-gradient(135deg, #2b0811, var(--bg-card));
     border: 1px solid var(--gold-dark);
     border-radius: var(--radius);
     padding: 36px;
@@ -481,7 +481,7 @@ nav ul li a.active-link::after {
 }
 
 .education-date {
-    background: #261f0a;
+    background: #2b0811;
     border: 1px solid var(--gold-dark);
     color: var(--gold-tint);
     font-size: 0.78rem;
@@ -531,7 +531,7 @@ nav ul li a.active-link::after {
 }
 
 .academic-table th {
-    background: #261f0a;
+    background: #2b0811;
     color: var(--gold-tint);
     padding: 13px 16px;
     font-weight: 600;
@@ -549,11 +549,11 @@ nav ul li a.active-link::after {
 }
 
 .academic-table tbody tr:hover {
-    background: rgba(212, 175, 55, 0.14);
+    background: rgba(128, 0, 32, 0.14);
 }
 
 .status-badge {
-    background: #261f0a;
+    background: #2b0811;
     color: var(--gold-tint);
     border: 1px solid var(--gold-dark);
     padding: 3px 10px;
@@ -584,7 +584,7 @@ nav ul li a.active-link::after {
 }
 
 .skill-tag {
-    background: #261f0a;
+    background: #2b0811;
     border: 1px solid var(--gold-dark);
     color: var(--gold-tint);
     padding: 5px 12px;
@@ -672,7 +672,7 @@ nav ul li a.active-link::after {
 
 .project-card {
     background-color: var(--bg-dark);
-    border: 1px solid #3d310f;
+    border: 1px solid #3d0f1b;
     border-radius: var(--radius);
     padding: 24px;
     display: flex;
@@ -683,7 +683,7 @@ nav ul li a.active-link::after {
 .project-card:hover {
     transform: translateY(-6px);
     border-color: var(--gold);
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 12px 30px rgba(128, 0, 32, 0.3);
 }
 
 .project-preview {
@@ -768,8 +768,8 @@ nav ul li a.active-link::after {
 }
 
 .tag {
-    background-color: #261f0a;
-    border: 1px solid #5e4b11;
+    background-color: #2b0811;
+    border: 1px solid #5e1125;
     color: var(--gold-tint);
     font-size: 0.76rem;
     font-weight: 500;
@@ -811,7 +811,7 @@ nav ul li a.active-link::after {
 
 .profile-card27 {
     background: linear-gradient(135deg, var(--gold-dark), #171717);
-    border: 1px solid #8a6f19;
+    border: 1px solid #8a1936;
     border-radius: var(--radius);
     padding: 24px;
     display: flex;
