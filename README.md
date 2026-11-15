@@ -33,6 +33,10 @@ A responsive, multi-page web application built for the **COS 106 (Introduction t
 - **CSS3:** External stylesheet (`style.css`) featuring CSS custom properties (`:root`), Flexbox, CSS Grid, smooth hover transitions, `@keyframes` animations, and responsive `@media` queries in a dark obsidian and burgundy theme.
 - **JavaScript (ES6+):** DOM manipulation, `addEventListener` event handling, `event.preventDefault()` form validation, dynamic UI filtering, `localStorage` state persistence, and EmailJS API integration.
 
+### Responsive Mobile Navigation Drawer
+- **Adaptive Breakpoint (`≤ 650px`):** Replaces the desktop horizontal navigation links with a compact three-bar hamburger toggle button (`#menuToggle`) on mobile screens to prevent header wrapping and save viewport space.
+- **Interactive State & Accessibility (`script.js`):** Uses DOM event listeners to toggle `.show-menu` visibility, synchronize `aria-expanded` attributes for screen readers, animate the icon into a close (`X`) button, and auto-close the drawer once a page link is tapped.
+
 ---
 
 ## Project Structure
